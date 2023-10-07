@@ -1,0 +1,48 @@
+<ng-container *ngIf="!showEditorWindow; else showWindow">
+  <div class="file-wrapper">
+    <div class="file-header">
+      <mat-form-field>
+        <mat-toolbar>
+          <input matInput [value]="fileName" accept=".pdf" />
+          <button
+            mat-flat-button
+            color="primary"
+            [disabled]="!currentFile"
+            (click)="upload()">
+            Upload
+          </button>
+          <input
+            type="file"
+            id="fileInput"
+            (change)="selectFile($event)"
+            name="fileInput"
+            accept=".pdf"/>
+        </mat-toolbar>
+      </mat-form-field>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #showWindow>
+  <div>
+    <span>Docs & Bits Editor</span>
+    <span class="spacer"></span>
+    <button mat-flat-button color="primary" (click)="downloadAsPDF()">
+      <mat-icon>download</mat-icon>Download as PDF
+    </button>
+  </div>
+  <div class="editor">
+    <form
+      name="mainMatForm"
+      [formGroup]="mainMatForm"
+      (ngSubmit)="onMainMatFormNgSubmit($event)">
+      <ckeditor
+        name="ckeditor_text"
+        formControlName="ckeditor_text"
+        editorUrl="https://cdn.ckeditor.com/4.14.0/full/ckeditor.js"
+        [config]="ckEditorConfig"
+        (ready)="onCkEditorReady($event)">
+      </ckeditor>
+    </form>
+  </div>
+</ng-template>

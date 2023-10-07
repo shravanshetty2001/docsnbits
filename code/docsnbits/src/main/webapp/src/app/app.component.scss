@@ -1,0 +1,45 @@
+#fileInput {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  width: 325px;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.mat-toolbar-single-row {
+  height: auto !important;
+  background: transparent;
+  padding: 0;
+}
+
+.mat-toolbar-single-row button {
+  width: 100px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  display: block;
+}
+
+.file-header {
+  width: 450px;
+  margin: auto;
+}
+
+.file-wrapper {
+  padding-top: 1%;
+}
+
+.spacer {
+  margin-right: 10px;
+}
+
+.editor{
+  margin-top: 15px;
+}
