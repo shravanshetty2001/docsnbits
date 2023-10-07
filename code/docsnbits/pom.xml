@@ -91,6 +91,11 @@
 			<artifactId>openhtmltopdf-core</artifactId>
 			<version>1.0.6</version>
 		</dependency>
+		<dependency>
+			<groupId>com.openhtmltopdf</groupId>
+			<artifactId>openhtmltopdf-pdfbox</artifactId>
+			<version>1.0.6</version>
+		</dependency>		
 	</dependencies>
 
 	<build>
